@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/sample.css">
+	<title>筋トレ</title>
+</head>
+
+<body>
+	<header>
+		<h1>本日の筋トレメニュー</h1>
+	</header>
+
+	<main>
+		<ul>
+			<li id="pull">メニューを決める</li>
+		</ul>
+		<p id="echo">本日のメニューは？</p>
+		<p id="result"></p>
+		<p id="result-img"></p>
+		<p id="result-movie"></p>
+
+	</main>
+
+	<footer>フッター</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		// ここに処理を追加
+
+
+		$("#pull").on("click", function () {
+			const min = 1;
+			const max = 100;
+			const omikuzinumber = Math.floor(Math.random() * (max - min + 1));
+			console.log(omikuzinumber);
+
+			if (omikuzinumber <= 5) {
+				$("#result").html("HIIT");
+			} else if (omikuzinumber > 5 && omikuzinumber <= 20) {
+				$("#result").html("スクワット");
+			} else if (omikuzinumber > 20 && omikuzinumber <= 45) {
+				$("#result").html("腕立て伏せ");
+			} else {
+				$("#result").html("腹筋");
+			}
+
+			if (omikuzinumber <= 5) {
+				$("#result-img").html('<img src=MM4.jpeg alt="グ">');
+			} else if (omikuzinumber > 5 && omikuzinumber <= 20) {
+				$("#result-img").html('<img src=MM1.png alt="グ">');
+			} else if (omikuzinumber > 20 && omikuzinumber <= 45) {
+				$("#result-img").html('<img src=MM2.png alt="グ">');
+			} else {
+				$("#result-img").html('<img src=MM3.png alt="グ">');
+			}
+
+			if (omikuzinumber <= 5) {
+				$("#result-movie").html('<a href="https://www.youtube.com/watch?v=cQsupVhKcDg">MOVIE</a>');
+			} else if (omikuzinumber > 5 && omikuzinumber <= 20) {
+				$("#result-movie").html('<a href="https://www.youtube.com/watch?v=cQsupVhKcDg">MOVIE</a>');
+			} else if (omikuzinumber > 20 && omikuzinumber <= 45) {
+				$("#result-movie").html('<a href="https://www.youtube.com/watch?v=cQsupVhKcDg">MOVIE</a>');
+			} else {
+				$("#result-movie").html('<a href="https://www.youtube.com/watch?v=cQsupVhKcDg">MOVIE</a>');
+			}
+
+		});
+
+	</script>
+
+</body>
+
+</html>
