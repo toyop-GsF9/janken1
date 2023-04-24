@@ -1,6 +1,6 @@
 /* Body Style */
 body {
-	background: linear-gradient(45deg, #FFC0CB, #4B0082);
+	background: linear-gradient(45deg, #b3efda, #0299e4);
 	font-family: "Nunito Sans", sans-serif;
 	color: white;
 	margin: 0;
@@ -61,10 +61,11 @@ p {
 #result-img img {
 	max-width: 150px;
 	height: auto;
+	max-height: 150px;
 }
 
 #result-movie a {
-	background-color: #4B0082;
+	background-color: #09e7c9;
 	color: white;
 	text-decoration: none;
 	padding: 10px 20px;
@@ -75,7 +76,7 @@ p {
 
 #result-movie a:hover {
 	background-color: white;
-	color: #4B0082;
+	color: #0643ed;
 }
 
 /* Footer Style */
